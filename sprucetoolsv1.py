@@ -26,12 +26,15 @@ def file_stuff():
         print("File opened!")
         searchIn = input("Enter something to search for >")
         found = False
+        line_number = 0
         for line in file:
+            line_number += 1
             if searchIn in line:
+                lineFound = line_number
                 found = True
                 break
         if found == True:
-            print("String found in file opened!")
+            print("String found in file opened on line " + str(lineFound))
         else:
             print("String not found in file opened!")
         file.close()
