@@ -58,7 +58,16 @@ def chat():
 
 def fun_stuff():
     print_logo()
-    print("Nothing here yet!")
+    print("Fun Stuff")
+    print("1) About")
+    print("2) Back")
+    usrIn = int(input("Fun Stuff>"))
+    # about command
+    if usrIn == 1:
+        print_logo()
+        print("Spruce Tools by Spruce#7704")
+        print("Made in python bc idk")
+        print("Idk why I made this but it exist now ig :troll:")
 
 # main handling
 running = True
