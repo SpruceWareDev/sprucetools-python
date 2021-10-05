@@ -1,4 +1,6 @@
 import os
+import requests
+import json
 # utils
 def print_logo():
     print(" ___ ___ ___ _ _ ___ ___ ")
@@ -43,7 +45,12 @@ def file_stuff():
 
 def server_stuff():
     print_logo()
-    print("Nothing here yet!")
+    url = "http://ip-api.com/json/"
+    ipIn = input("IP Searcher> Enter an IP to search :")
+    resp = requests.get(url=url, params=ipIn)
+    data = resp.json()
+    for key, value in data.items():
+        print(key, ":", value)
 
 def chat():
     print_logo()
